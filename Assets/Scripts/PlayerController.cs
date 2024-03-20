@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 4.0f;
+    public float jumpforce = 8;
     Rigidbody2D rb;
     private float xInput, yInput;
 
@@ -34,7 +35,17 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("MoveX", lookDirection.x);
         anim.SetFloat("MoveY", lookDirection.y);
-        anim.SetFloat("Speed", move.magnitude);
+
+        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //    //rb.AddForce(Vector2.up * jumpforce);
+        //    //rb.velocity = new Vector2(rb.velocity.x, jumpforce);
+        //    print("jump");
+        //}
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            anim.SetTrigger("Bend");
+        }
     }
 
     private void FixedUpdate()
