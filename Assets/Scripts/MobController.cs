@@ -5,7 +5,6 @@ using UnityEngine;
 public class MobController : MonoBehaviour
 {
     Rigidbody2D rb;
-    Animator anim;
 
     public float speed = 2.0f;
     float timer;
@@ -17,7 +16,6 @@ public class MobController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         timer = changeTime;
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +26,7 @@ public class MobController : MonoBehaviour
         if (timer < 0)
         {
             direction = -direction;
+            FlipSprite();
             timer = changeTime;
         }
     }
@@ -36,8 +35,13 @@ public class MobController : MonoBehaviour
     {
         Vector2 position = rb.position;
         position.x = position.x + Time.deltaTime * speed * direction;
-        anim.SetFloat("MoveX", direction);
-
         rb.MovePosition(position);
+    }
+
+    void FlipSprite()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1f;
+        transform.localScale = scale;
     }
 }

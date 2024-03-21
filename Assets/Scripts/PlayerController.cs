@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 4.0f;
     public float jumpforce;
     Rigidbody2D rb;
-    private float xInput, yInput;
+    private float xInput;
 
     Animator anim;
-    Vector2 lookDirection = new Vector2(1, 0);
+    //Vector2 lookDirection = new Vector2(1, 0);
+
+    bool isFacingR = true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,22 +25,24 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
 
-        Vector2 move = new Vector2(xInput, yInput);
+        FlipSprite();
 
-        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
-        {
-            lookDirection.Set(move.x, move.y);
-            lookDirection.Normalize();
-        }
+        //Vector2 move = new Vector2(xInput, yInput);
 
-        anim.SetFloat("MoveX", lookDirection.x);
-        anim.SetFloat("MoveY", lookDirection.y);
+        //if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+        //{
+        //    lookDirection.Set(move.x, move.y);
+        //    lookDirection.Normalize();
+        //}
+
+        //anim.SetFloat("MoveX", lookDirection.x);
+        //anim.SetFloat("MoveY", lookDirection.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector2.up * jumpforce);
+            //rb.AddForce(Vector2.up * jumpforce);
+            rb.velocity = Vector2.up * jumpforce;
             print("jump");
         }
 
@@ -52,8 +56,18 @@ public class PlayerController : MonoBehaviour
     {
         //========PLAYER MOVEMENT=======
         //transform.position += (new Vector3(xInput, yInput, 0)) * speed * Time.deltaTime;
-        Vector2 movePos = new Vector2(xInput, yInput) * speed * Time.fixedDeltaTime;
-        Vector2 newPos = (Vector2)transform.position + movePos;
-        rb.MovePosition(newPos);
+        rb.velocity = new Vector3(xInput, rb.velocity.y, 0) * speed;
+        //Vector2 movePos = new Vector2(xInput, yInput) * speed * Time.fixedDeltaTime;
+        //Vector2 newPos = (Vector2)transform.position + movePos;
+        //rb.MovePosition(newPos);
+    }
+
+    void FlipSprite() {
+        if (isFacingR && xInput < 0 || !isFacingR && xInput > 0) {
+            isFacingR = !isFacingR;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1f;
+            transform.localScale = scale;
+        }
     }
 }
