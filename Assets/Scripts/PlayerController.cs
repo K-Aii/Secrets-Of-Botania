@@ -41,9 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //rb.AddForce(Vector2.up * jumpforce);
-            rb.velocity = Vector2.up * jumpforce;
-            print("jump");
+            rb.AddForce(Vector2.up * jumpforce);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -56,14 +54,16 @@ public class PlayerController : MonoBehaviour
     {
         //========PLAYER MOVEMENT=======
         //transform.position += (new Vector3(xInput, yInput, 0)) * speed * Time.deltaTime;
-        rb.velocity = new Vector3(xInput, rb.velocity.y, 0) * speed;
+        rb.velocity = new Vector3(xInput * speed, rb.velocity.y, 0);
         //Vector2 movePos = new Vector2(xInput, yInput) * speed * Time.fixedDeltaTime;
         //Vector2 newPos = (Vector2)transform.position + movePos;
         //rb.MovePosition(newPos);
     }
 
-    void FlipSprite() {
-        if (isFacingR && xInput < 0 || !isFacingR && xInput > 0) {
+    void FlipSprite()
+    {
+        if (isFacingR && xInput < 0 || !isFacingR && xInput > 0)
+        {
             isFacingR = !isFacingR;
             Vector3 scale = transform.localScale;
             scale.x *= -1f;
