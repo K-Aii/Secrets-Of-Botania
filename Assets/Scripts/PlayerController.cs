@@ -10,34 +10,21 @@ public class PlayerController : MonoBehaviour
     private float xInput;
 
     Animator anim;
-    //Vector2 lookDirection = new Vector2(1, 0);
 
     bool isFacingR = true;
+    public GameObject cutPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         xInput = Input.GetAxis("Horizontal");
 
         FlipSprite();
-
-        //Vector2 move = new Vector2(xInput, yInput);
-
-        //if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
-        //{
-        //    lookDirection.Set(move.x, move.y);
-        //    lookDirection.Normalize();
-        //}
-
-        //anim.SetFloat("MoveX", lookDirection.x);
-        //anim.SetFloat("MoveY", lookDirection.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -48,16 +35,15 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Bend");
         }
+
+        if (Input.GetKeyDown(KeyCode.C)) {
+            Cut();
+        }
     }
 
     private void FixedUpdate()
     {
-        //========PLAYER MOVEMENT=======
-        //transform.position += (new Vector3(xInput, yInput, 0)) * speed * Time.deltaTime;
-        rb.velocity = new Vector3(xInput * speed, rb.velocity.y, 0);
-        //Vector2 movePos = new Vector2(xInput, yInput) * speed * Time.fixedDeltaTime;
-        //Vector2 newPos = (Vector2)transform.position + movePos;
-        //rb.MovePosition(newPos);
+         rb.velocity = new Vector3(xInput * speed, rb.velocity.y, 0);   //horizontal movement
     }
 
     void FlipSprite()
@@ -69,5 +55,17 @@ public class PlayerController : MonoBehaviour
             scale.x *= -1f;
             transform.localScale = scale;
         }
+    }
+
+    public void Cut() {
+        GameObject cutEffect = Instantiate(cutPrefab, rb.position, Quaternion.identity);
+
+        cutEffect.transform.localScale = isFacingR ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);      //flip sprite
+
+        Cut cutScript = cutEffect.GetComponent<Cut>();
+        Vector2 lookDirection = isFacingR ? new Vector2(1,0) : new Vector2(-1,0);
+        cutScript.Launch(lookDirection, 300);
+
+        //animator.SetTrigger("Launch");
     }
 }
