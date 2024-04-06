@@ -41,22 +41,13 @@ public class InvSlot : MonoBehaviour, IPointerClickHandler
     {
         //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
         //ImageDOCrossfade.DOCrossfadeImage(UIimg, selectedSprite, 0.3f);
-        //InvItem itemInSlot = GetComponentInChildren<InvItem>();
-        //if (itemInSlot != null && itemInSlot.item == cut)
-        //{
-        //    PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        //    pc.Cut();
-        //}
+
         StartCoroutine(Clicked());
-        //if child Item = cut,then call playercontroller.cut()
-        
+
     }
 
     IEnumerator Clicked()
     {
-        
-
-        
         Select();
         yield return new WaitForSeconds(1);
         Deselect();

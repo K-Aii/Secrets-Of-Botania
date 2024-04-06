@@ -8,6 +8,7 @@ public class CutTree : MonoBehaviour
     bool stay;
     InventoryManager inv;
     public Item requiredSkill;
+    public bool collide = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class CutTree : MonoBehaviour
         //icon = GameObject.Find("shift").GetComponent<SpriteRenderer>();
         player = GameObject.FindWithTag("Player");
         inv = GameObject.Find("GameController").GetComponent<InventoryManager>();
+     //   Debug.Log(transform.localRotation);
     }
 
     // Update is called once per frame
@@ -22,6 +24,11 @@ public class CutTree : MonoBehaviour
     {
         if (stay)
         {
+            if (!collide)
+            {
+                Physics2D.IgnoreCollision(player.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
+            }
+
             if (inv.SearchItem(requiredSkill) != null)
             {
                 inv.SearchItem(requiredSkill).Activate();
@@ -52,4 +59,6 @@ public class CutTree : MonoBehaviour
             stay = false;
         }
     }
+
+
 }
