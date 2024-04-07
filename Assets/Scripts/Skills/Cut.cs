@@ -8,12 +8,15 @@ public class Cut : MonoBehaviour
     float distance;
     GameObject player;
     BoxCollider2D treeCollider;
+    public AudioClip fell;
+    AudioSource audioSource;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         treeCollider = GameObject.FindWithTag("Interactable").GetComponent<BoxCollider2D>();
+        audioSource = GameObject.FindWithTag("Interactable").GetComponent<AudioSource>();
     }
 
     public void Launch(Vector2 direction, float force)
@@ -52,9 +55,11 @@ public class Cut : MonoBehaviour
             //StartCoroutine(TreeFall(other.collider.gameObject));
             GameObject tree = other.collider.gameObject;
             tree.transform.rotation = tree.transform.rotation * Quaternion.Euler(0, 0, -90);
+            audioSource.PlayOneShot(fell);
 
             other.collider.GetComponent<CutTree>().collide = true;
             Physics2D.IgnoreCollision(player.GetComponent<BoxCollider2D>(), treeCollider, false);
+            other.collider.GetComponent<CapsuleCollider2D>().enabled = false;
 
         }
 

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     Animator anim;
 
-    bool isFacingR = true;
+    public bool isFacingR = true;
     public GameObject cutPrefab;
 
     void Start()
