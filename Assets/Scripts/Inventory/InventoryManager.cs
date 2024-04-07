@@ -6,6 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public InvSlot[] invSlots;
     public GameObject itemPrefab;
+    public InvSlot graySlot;
 
     int selectedSlot = -1; //none, 0-4
 
@@ -15,6 +16,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab)) {
             AddItem(test);
+            //NewSkill(test);
         }
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -54,6 +56,10 @@ public class InventoryManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void NewSkill(Item skill) {
+        SpawnItem(skill, graySlot);
     }
 
     void SpawnItem(Item item, InvSlot slot) {

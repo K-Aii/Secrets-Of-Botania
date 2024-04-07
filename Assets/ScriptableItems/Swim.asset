@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   function: 1
-  img: {fileID: 21300000, guid: fd0a67ad10e3c934188b3e31c0d5fc49, type: 3}
+  img: {fileID: 21300000, guid: f5af99da898896946802ea662b591b15, type: 3}
