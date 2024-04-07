@@ -58,8 +58,8 @@ public class InventoryManager : MonoBehaviour
         return null;
     }
 
-    public void NewSkill(Item skill) {
-        SpawnItem(skill, graySlot);
+    public void ShowObtainableSkill(Item item) {
+        SpawnItem(item, graySlot);
     }
 
     void SpawnItem(Item item, InvSlot slot) {

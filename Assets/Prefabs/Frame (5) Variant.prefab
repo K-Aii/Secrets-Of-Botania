@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frame (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8070456799684697809, guid: 68e6b3c57f5257645823e7f03de2e7ea, type: 3}
+      propertyPath: m_TagString
+      value: graySlot
+      objectReference: {fileID: 0}
     - target: {fileID: 8070456799684697810, guid: 68e6b3c57f5257645823e7f03de2e7ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -32,6 +32,7 @@ public class Swim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (stay)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && !found)
@@ -47,7 +48,7 @@ public class Swim : MonoBehaviour
                 if (skillInSlot == null)
                 {
                     //print("t");
-                    inv.NewSkill(swimSkill);
+                    inv.ShowObtainableSkill(swimSkill);
                 }
 
             }
