@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public ItemType type;
-    public Function function;
+    //public Function function;
     public Sprite img;
 }
 

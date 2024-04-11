@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e2d1630f71846143ab46fe6223c788c, type: 3}
-  m_Name: Swim
+  m_Name: Jump
   m_EditorClassIdentifier: 
   type: 0
-  img: {fileID: 21300000, guid: e335abb6676b5f1458dd1002f43ea0b2, type: 3}
+  img: {fileID: 21300000, guid: e1a25a527a3abcc4c8d398230116620e, type: 3}
