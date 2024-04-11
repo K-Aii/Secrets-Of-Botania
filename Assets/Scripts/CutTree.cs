@@ -9,6 +9,8 @@ public class CutTree : MonoBehaviour
     InventoryManager inv;
     public Item requiredSkill;
     public bool collide = false;
+    AudioSource audioSource;
+    public AudioClip noti;
 
     // Start is called before the first frame update
     void Start()
@@ -16,26 +18,17 @@ public class CutTree : MonoBehaviour
         //icon = GameObject.Find("shift").GetComponent<SpriteRenderer>();
         player = GameObject.FindWithTag("Player");
         inv = GameObject.Find("GameController").GetComponent<InventoryManager>();
-     //   Debug.Log(transform.localRotation);
+        audioSource = GetComponent<AudioSource>();
+        //Debug.Log(transform.localRotation);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (stay)
-        {
             if (!collide)
-            {
                 Physics2D.IgnoreCollision(player.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
-            }
 
-            
-
-            //if click skill --> @skill script --> detect collide with tree --> tree down --> enable box collision with player
-        }
-        else {
-            
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,6 +38,7 @@ public class CutTree : MonoBehaviour
             if (inv.SearchItem(requiredSkill) != null)
             {
                 inv.SearchItem(requiredSkill).Activate();
+                audioSource.PlayOneShot(noti);
             }
         }
     }

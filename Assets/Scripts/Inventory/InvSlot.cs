@@ -5,51 +5,32 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class InvSlot : MonoBehaviour, IPointerClickHandler
+public class InvSlot : MonoBehaviour
 {
     public Sprite selectedSprite;
     public Sprite deselectedSprite;
     public Sprite activeSprite;
-    [SerializeField]Image UIimg;
 
     public Item cut;
 
     private void Awake()
     {
         Deselect();
-        //UIimg = GetComponent<Image>();
     }
 
     public void Select() //when clicked (use item) --> glowing sprite
     {
-        UIimg.sprite = selectedSprite;
+        GetComponent<Image>().sprite = selectedSprite;
     }
 
     public void Deselect() // normal beige
     {
-        UIimg.sprite = deselectedSprite;
+        GetComponent<Image>().sprite = deselectedSprite;
     }
 
     public void Activate() //normal white
     {
-        UIimg.sprite = activeSprite;
+        GetComponent<Image>().sprite = activeSprite;
     }
 
-
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
-        //ImageDOCrossfade.DOCrossfadeImage(UIimg, selectedSprite, 0.3f);
-
-        //StartCoroutine(Clicked());
-
-    }
-
-    //IEnumerator Clicked()
-    //{
-    //    Select();
-    //    yield return new WaitForSeconds(1);
-    //    Deselect();
-    //}
 }
