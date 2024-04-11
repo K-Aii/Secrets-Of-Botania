@@ -63,6 +63,10 @@ public class Cut : MonoBehaviour
 
         }
 
+        if (other.collider.tag == "Mobs") {
+            Destroy(other.collider.gameObject);
+        }
+
         Destroy(gameObject);
     }
 

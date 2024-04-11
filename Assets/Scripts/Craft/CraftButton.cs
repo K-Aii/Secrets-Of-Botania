@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class CraftButton : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField]bool isOn = false;
+    bool isOn = false;
     public CanvasGroup craft;
     
     // Start is called before the first frame update
@@ -20,13 +20,18 @@ public class CraftButton : MonoBehaviour, IPointerClickHandler
     {
         
     }
-    public void OnPointerClick(PointerEventData eventData) {
+
+    public void Toggle() { 
         isOn = !isOn;
 
         if (isOn)
             craft.alpha = 1;
         else
             craft.alpha = 0;
+    }
 
+    public void OnPointerClick(PointerEventData eventData) {
+
+        Toggle();
     }
 }

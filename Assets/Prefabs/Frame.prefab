@@ -91,4 +91,5 @@ MonoBehaviour:
   selectedSprite: {fileID: 21300000, guid: ed3ce16d92fefef4094e2d5c57b12b5c, type: 3}
   deselectedSprite: {fileID: 21300000, guid: f531e816da45f3f45aa12f07479481be, type: 3}
   activeSprite: {fileID: 21300000, guid: 83d3dbe04cb62744282be1658a919802, type: 3}
+  UIimg: {fileID: 8070456799684697820}
   cut: {fileID: 11400000, guid: be5468f20a437b043a128e422fd0331a, type: 2}

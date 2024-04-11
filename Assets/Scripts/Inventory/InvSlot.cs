@@ -10,29 +10,29 @@ public class InvSlot : MonoBehaviour, IPointerClickHandler
     public Sprite selectedSprite;
     public Sprite deselectedSprite;
     public Sprite activeSprite;
-    Image UIimg;
+    [SerializeField]Image UIimg;
 
     public Item cut;
 
     private void Awake()
     {
         Deselect();
-        UIimg = GetComponent<Image>();
+        //UIimg = GetComponent<Image>();
     }
 
     public void Select() //when clicked (use item) --> glowing sprite
     {
-        GetComponent<Image>().sprite = selectedSprite;
+        UIimg.sprite = selectedSprite;
     }
 
     public void Deselect() // normal beige
     {
-        GetComponent<Image>().sprite = deselectedSprite;
+        UIimg.sprite = deselectedSprite;
     }
 
     public void Activate() //normal white
     {
-        GetComponent<Image>().sprite = activeSprite;
+        UIimg.sprite = activeSprite;
     }
 
 
@@ -42,14 +42,14 @@ public class InvSlot : MonoBehaviour, IPointerClickHandler
         //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
         //ImageDOCrossfade.DOCrossfadeImage(UIimg, selectedSprite, 0.3f);
 
-        StartCoroutine(Clicked());
+        //StartCoroutine(Clicked());
 
     }
 
-    IEnumerator Clicked()
-    {
-        Select();
-        yield return new WaitForSeconds(1);
-        Deselect();
-    }
+    //IEnumerator Clicked()
+    //{
+    //    Select();
+    //    yield return new WaitForSeconds(1);
+    //    Deselect();
+    //}
 }

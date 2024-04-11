@@ -19,29 +19,38 @@ public class MobController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        timer -= Time.deltaTime;
+    //void Update()
+    //{
+    //    timer -= Time.deltaTime;
 
-        if (timer < 0)
-        {
-            direction = -direction;
-            FlipSprite();
-            timer = changeTime;
-        }
-    }
+    //    if (timer < 0)
+    //    {
+    //        direction = -direction;
+    //        FlipSprite();
+    //        timer = changeTime;
+    //    }
+    //}
 
-    void FixedUpdate()
-    {
-        Vector2 position = rb.position;
-        position.x = position.x + Time.deltaTime * speed * direction;
-        rb.MovePosition(position);
-    }
+    //void FixedUpdate()
+    //{
+    //    Vector2 position = rb.position;
+    //    position.x = position.x + Time.deltaTime * speed * direction;
+    //    rb.MovePosition(position);
+    //}
 
     void FlipSprite()
     {
         Vector3 scale = transform.localScale;
+        //Mathf.Sin()
         scale.x *= -1f;
         transform.localScale = scale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player") {
+            PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            player.Die();
+        }
     }
 }
