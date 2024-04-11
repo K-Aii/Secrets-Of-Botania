@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Die() {
+    public void Die() {
         audioSource.PlayOneShot(damaged);
         StartCoroutine(fade.FadeOut(1f));
         StartCoroutine(Respawn());

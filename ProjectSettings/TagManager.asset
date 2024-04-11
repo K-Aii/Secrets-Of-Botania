@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - graySlot
   - Floor
+  - Mobs
   layers:
   - Default
   - TransparentFX

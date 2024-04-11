@@ -11,6 +11,8 @@ public class CraftManager : MonoBehaviour
 
     public Item one,two, r;
 
+    public List<Recipe> recipes;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +34,12 @@ public class CraftManager : MonoBehaviour
         item1 = inv.SearchItem(first) != null;
         item2 = inv.SearchItem(second) != null;
         res = inv.SearchItem(result) == null;
+        //print(item1); print(item2); print(res);
 
         if (item1 && item2 && res)
         {       //match --> show craft
+            GameObject.Find("Book_base").GetComponent<CanvasGroup>().alpha = 1;
+            GameObject.Find("Book_no").GetComponent<CanvasGroup>().alpha = 0;
             img1.sprite = first.img;
             img2.sprite = second.img;
             newSkillimg.sprite = result.img;
@@ -43,6 +48,7 @@ public class CraftManager : MonoBehaviour
         else 
         {
             GameObject.Find("Book_base").GetComponent<CanvasGroup>().alpha = 0;
+            GameObject.Find("Book_no").GetComponent<CanvasGroup>().alpha = 1;
         }
 
     }

@@ -29,18 +29,12 @@ public class CutTree : MonoBehaviour
                 Physics2D.IgnoreCollision(player.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
             }
 
-            if (inv.SearchItem(requiredSkill) != null)
-            {
-                inv.SearchItem(requiredSkill).Activate();
-            }
+            
 
             //if click skill --> @skill script --> detect collide with tree --> tree down --> enable box collision with player
         }
         else {
-            if (inv.SearchItem(requiredSkill) != null)
-            {
-                inv.SearchItem(requiredSkill).Deselect();
-            }
+            
         }
     }
 
@@ -48,6 +42,10 @@ public class CutTree : MonoBehaviour
     {
         if (collision.tag == "Player") {
             stay = true;
+            if (inv.SearchItem(requiredSkill) != null)
+            {
+                inv.SearchItem(requiredSkill).Activate();
+            }
         }
     }
 
@@ -57,6 +55,10 @@ public class CutTree : MonoBehaviour
         if (collision.tag == "Player")
         {
             stay = false;
+            if (inv.SearchItem(requiredSkill) != null)
+            {
+                inv.SearchItem(requiredSkill).Deselect();
+            }
         }
     }
 
