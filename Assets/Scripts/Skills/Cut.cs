@@ -5,10 +5,9 @@ using UnityEngine;
 public class Cut : MonoBehaviour
 {
     Rigidbody2D rb;
-    float distance;
     GameObject player;
     BoxCollider2D treeCollider;
-    public AudioClip fell;
+    public AudioClip fell, sword;
     AudioSource audioSource;
 
     void Awake()
@@ -21,6 +20,7 @@ public class Cut : MonoBehaviour
 
     public void Launch(Vector2 direction, float force)
     {
+        audioSource.PlayOneShot(sword);
         rb.AddForce(direction * force);
         StartCoroutine(Decline());
     }
@@ -34,10 +34,10 @@ public class Cut : MonoBehaviour
     IEnumerator Decline()
     {
         float currentTime = 0;
-        while (currentTime < 0.5f)
+        while (currentTime < 10f)
         {
             currentTime += Time.deltaTime;
-            float newS = Mathf.Lerp(1, 0, currentTime / 0.5f);
+            float newS = Mathf.Lerp(transform.localScale.x, 0, currentTime / 10f);
             transform.localScale = new Vector3(newS, newS, newS); 
             yield return null;
         }

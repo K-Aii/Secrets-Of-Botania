@@ -19,6 +19,11 @@ public class CraftManager : MonoBehaviour
         
     }
 
+    public void Craft(Item a , Item b)
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {

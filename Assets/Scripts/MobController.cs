@@ -18,25 +18,25 @@ public class MobController : MonoBehaviour
         timer = changeTime;
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    timer -= Time.deltaTime;
+    //Update is called once per frame
+    void Update()
+    {
+        timer -= Time.deltaTime;
 
-    //    if (timer < 0)
-    //    {
-    //        direction = -direction;
-    //        FlipSprite();
-    //        timer = changeTime;
-    //    }
-    //}
+        if (timer < 0)
+        {
+            direction = -direction;
+            FlipSprite();
+            timer = changeTime;
+        }
+    }
 
-    //void FixedUpdate()
-    //{
-    //    Vector2 position = rb.position;
-    //    position.x = position.x + Time.deltaTime * speed * direction;
-    //    rb.MovePosition(position);
-    //}
+    void FixedUpdate()
+    {
+        Vector2 position = rb.position;
+        position.x = position.x + Time.deltaTime * speed * direction;
+        rb.MovePosition(position);
+    }
 
     void FlipSprite()
     {

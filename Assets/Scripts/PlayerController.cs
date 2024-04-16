@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
     BlackFade fade;
 
     public bool isFacingR = true;
-    public GameObject cutPrefab;
+    public GameObject cutPrefab;//, bear, respawn1, respawn2;
 
     void Start()
     {
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         rb.simulated = false;
         transform.position = new Vector3(-7f, -1.25f, 0);
+        //Instantiate(bear, respawn1.transform.position, respawn1.transform.rotation);
         StartCoroutine(fade.FadeIn(1f));
         rb.simulated = true;
         isFalling = false;
@@ -105,10 +107,7 @@ public class PlayerController : MonoBehaviour
 
         cutEffect.transform.localScale = isFacingR ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);      //flip sprite
 
-        Cut cutScript = cutEffect.GetComponent<Cut>();
         Vector2 lookDirection = isFacingR ? new Vector2(1,0) : new Vector2(-1,0);
-        cutScript.Launch(lookDirection, 300);
-
-        //animator.SetTrigger("Launch");
+        cutEffect.GetComponent<Cut>().Launch(lookDirection, 300);
     }
 }

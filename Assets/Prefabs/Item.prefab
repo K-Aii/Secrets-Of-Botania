@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
+  success: {fileID: 8300000, guid: 4bbb94a58507661449325e3743ba7d85, type: 3}
   cut: {fileID: 11400000, guid: be5468f20a437b043a128e422fd0331a, type: 2}
 --- !u!225 &2414293405754270722
 CanvasGroup:
