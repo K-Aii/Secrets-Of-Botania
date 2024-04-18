@@ -36,6 +36,14 @@ public class PlayerController : MonoBehaviour
 
         FlipSprite();
 
+        if (xInput == 0)
+        {
+            anim.SetBool("isWalking", false);
+        }
+        else {
+            anim.SetBool("isWalking", true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Floor"));     //ground check
