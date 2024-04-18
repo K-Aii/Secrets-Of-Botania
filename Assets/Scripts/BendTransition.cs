@@ -11,7 +11,8 @@ public class BendTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        icon = GameObject.Find("shift").GetComponent<SpriteRenderer>();
+        //icon = GameObject.Find("shift").GetComponent<SpriteRenderer>();
+        icon = transform.GetChild(0).GetComponent<SpriteRenderer>();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -21,7 +22,10 @@ public class BendTransition : MonoBehaviour
         if (stay) {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                player.transform.position = new Vector3(37f, 2.5f, 0);
+                if(this.name == "tree03")
+                    player.transform.position = new Vector3(37f, 2.5f, 0);
+                else if (this.name == "tree06")
+                    player.transform.position = new Vector3(27.5f, -1.25f, 0);
             }
         }
     }

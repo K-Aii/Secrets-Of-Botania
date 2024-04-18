@@ -7,32 +7,38 @@ using UnityEngine.UI;
 public class CraftManager : MonoBehaviour
 {
     public Image img1, img2, newSkillimg;
+    public Sprite btnAlertIcon, btnDefaultIcon;
     public TextMeshProUGUI skillName;
-
-    public Item one,two, r;
+    Item resultant;
 
     public List<Recipe> recipes;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    public void Craft(Item a , Item b)
-    {
-
+        foreach (var recipe in recipes)
+        {
+            ShowPage(recipe.a, recipe.b, recipe.result);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
-            ShowPage(one, two, r);
+
+    }
+
+
+    public void ShowForSkill(Item skill) {  //check all recipes and show match page
+        foreach (var recipe in recipes)
+        {
+            if (recipe.a == skill || recipe.b == skill)
+                ShowPage(recipe.a, recipe.b, recipe.result);
+
         }
     }
 
-    public void ShowPage(Item first, Item second, Item result) {
+    public void ShowPage(Item first, Item second, Item result) { 
         InventoryManager inv = GetComponent<InventoryManager>();
 
         bool item1, item2, res;
@@ -45,16 +51,32 @@ public class CraftManager : MonoBehaviour
         {       //match --> show craft
             GameObject.Find("Book_base").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("Book_no").GetComponent<CanvasGroup>().alpha = 0;
+            GameObject.Find("CraftButton").GetComponent<Image>().sprite = btnAlertIcon;
             img1.sprite = first.img;
             img2.sprite = second.img;
             newSkillimg.sprite = result.img;
             skillName.text = result.name;
+            resultant = result;
         }
         else 
         {
             GameObject.Find("Book_base").GetComponent<CanvasGroup>().alpha = 0;
             GameObject.Find("Book_no").GetComponent<CanvasGroup>().alpha = 1;
+            GameObject.Find("CraftButton").GetComponent<Image>().sprite = btnDefaultIcon;
         }
 
+    }
+
+    public void Craft()
+    {
+        InventoryManager inv = GameObject.Find("GameController").GetComponent<InventoryManager>();
+        inv.AddItem(resultant);
+        //update book page + check if any other craftable
+        foreach (var recipe in recipes)
+        {
+            ShowPage(recipe.a, recipe.b, recipe.result);
+        }
+        //close ui auto
+        GameObject.Find("CraftButton").GetComponent<CraftUIButton>().Toggle();
     }
 }

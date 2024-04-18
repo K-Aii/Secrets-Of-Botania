@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Recipe
 {
-    [SerializeField] Item a;
-    [SerializeField] Item b;
-    [SerializeField] Item result;
+    [SerializeField] public Item a;
+    [SerializeField] public Item b;
+    [SerializeField] public Item result;
 }

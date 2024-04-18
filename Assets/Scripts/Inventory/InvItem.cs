@@ -52,7 +52,9 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
             GameObject.Find("new Slot_BG").GetComponent<CanvasGroup>().alpha = 0;   //unshow new skill notify slot
             GameObject.Find("swimSkill").GetComponent<SpriteRenderer>().enabled = false;    //unshow skill obtaining obj
 
-
+            //check recipe --> show and alert if new
+            CraftManager craftManager = GameObject.Find("GameController").GetComponent<CraftManager>();
+            craftManager.ShowForSkill(clickedItem.GetComponent<InvItem>().item);
         }
     }
 

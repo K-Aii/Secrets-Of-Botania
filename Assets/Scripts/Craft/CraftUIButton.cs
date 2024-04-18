@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class CraftButton : MonoBehaviour, IPointerClickHandler
+public class CraftUIButton : MonoBehaviour, IPointerClickHandler
 {
     bool isOn = false;
     public CanvasGroup craft;

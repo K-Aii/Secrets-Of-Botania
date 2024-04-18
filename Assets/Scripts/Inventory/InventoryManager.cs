@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
     int selectedSlot = -1; //none, 0-4
 
     public Item test;
+    public AudioClip success;
+
 
     private void Update()
     {
@@ -41,7 +43,7 @@ public class InventoryManager : MonoBehaviour
         {
             InvItem itemInSlot = invSlots[i].GetComponentInChildren<InvItem>();
             if (itemInSlot == null) {         //loop through array search for empty slot(=without child)
-                SpawnItem(item, invSlots[i]);
+                StartCoroutine(SpawnItem(item, invSlots[i]));
                 return;
             }
         }
@@ -59,13 +61,21 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void ShowObtainableSkill(Item item) {
-        SpawnItem(item, graySlot);
+        StartCoroutine(SpawnItem(item, graySlot));
     }
 
-    void SpawnItem(Item item, InvSlot slot) {
+
+    IEnumerator SpawnItem(Item item, InvSlot slot) {
         GameObject newItem = Instantiate(itemPrefab, slot.transform);   //generate new item prefab with slot as parent 
         InvItem invItem = newItem.GetComponent<InvItem>();
         invItem.InitialiseItem(item);       //get script in newly created item prefab and initialise
+        if (slot != graySlot)
+        {
+            GameObject.Find("Canvas").GetComponent<AudioSource>().PlayOneShot(success);
+            slot.Activate();
+            yield return new WaitForSeconds(1);
+            slot.Deselect();
+        }
     }
     
 }
