@@ -2,45 +2,59 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Transition : MonoBehaviour
 {
     public int nextLevel;
-    public Animator transAnim;
-    GameObject trans;
+    BlackFade fade;
+    bool stay;
+
 
     public static Transition instance;
 
     public void Awake()
     {
-        trans = GameObject.Find("trans");
+        fade = FindObjectOfType<BlackFade>();
+        stay = false;
+
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(trans);
+            DontDestroyOnLoad(GameObject.Find("Canvas"));
         }
-        else {
-            Destroy(trans);
+        //else {
+        //    Destroy(GameObject.Find("Canvas"));
+        //}
+
+        if (fade.GetComponent<Image>().color.a == 1)
+            StartCoroutine(fade.FadeIn(1f));
+    }
+
+    private void Update()
+    {
+        if (fade.completed && stay)
+        {
+            SceneManager.LoadScene(nextLevel);
         }
     }
 
 
-    public void NextLevel() {
-        StartCoroutine(LoadLevel());
-    }
+    //public void NextLevel() {
+    //    StartCoroutine(LoadLevel());
+    //}
 
-    IEnumerator LoadLevel() {
-        transAnim.SetTrigger("fadeIn");
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadSceneAsync(nextLevel);
-        transAnim.SetTrigger("fadeOut");
+    //IEnumerator LoadLevel() {
+    //    yield return new WaitForSeconds(2);
+    //    SceneManager.LoadSceneAsync(nextLevel);
 
-    }
-    
-        private void OnTriggerEnter2D(Collider2D collision)
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player") {
-            NextLevel();
+            stay = true;
+            StartCoroutine(fade.FadeOut(1f));
         }
     }
 

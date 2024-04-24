@@ -11,11 +11,6 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
     public AudioClip success;
 
 
-    [Header("Skills")]
-    public Item cut;
-
-
-
     public void InitialiseItem(Item newitem)
     {
         item = newitem;
@@ -36,12 +31,16 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
         //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject);
         GetComponentInParent<InvSlot>().StartCoroutine(Clicked());
 
+        //Skill --> Cut
         InvItem itemInSlot = GetComponent<InvItem>();
-        if (itemInSlot != null && itemInSlot.item == cut)
-        {
-            PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        if (itemInSlot != null && itemInSlot.item.name == "Cut")
             pc.Cut();
-        }
+
+
+        //Skill --> Jump
+        if (itemInSlot != null && itemInSlot.item.name == "Jump")
+            pc.Jump();
 
         //if parent is graySlot --> add new skill
         GameObject clickedItem = eventData.pointerCurrentRaycast.gameObject;

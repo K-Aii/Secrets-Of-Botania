@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class CraftUIButton : MonoBehaviour, IPointerClickHandler
+public class MapUIButton : MonoBehaviour, IPointerClickHandler
 {
     bool isOn = false;
-    public CanvasGroup craft;
+    public CanvasGroup map;
     
     public void Toggle() { 
         isOn = !isOn;
 
         if (isOn)
-            craft.alpha = 1;
+            map.alpha = 1;
         else
-            craft.alpha = 0;
+            map.alpha = 0;
     }
 
     public void OnPointerClick(PointerEventData eventData) {

@@ -46,12 +46,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Floor"));     //ground check
-            if (hit.collider != null)
-            {
-                rb.AddForce(Vector2.up * jumpforce);
-            }
-            
+            Jump();            
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -80,6 +75,14 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
          rb.velocity = new Vector3(xInput * speed, rb.velocity.y, 0);   //horizontal movement
+    }
+
+    public void Jump() {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Floor"));     //ground check
+        if (hit.collider != null)
+        {
+            rb.AddForce(Vector2.up * jumpforce);
+        }
     }
 
     void FlipSprite()
