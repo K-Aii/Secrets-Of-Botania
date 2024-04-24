@@ -11,8 +11,6 @@ public class InvSlot : MonoBehaviour
     public Sprite deselectedSprite;
     public Sprite activeSprite;
 
-    public Item cut;
-
     private void Awake()
     {
         Deselect();

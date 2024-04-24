@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 
 public class InvItem : MonoBehaviour, IPointerClickHandler
@@ -19,6 +20,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
 
     IEnumerator Clicked()
     {
+        GameObject.Find("ItemName_text").GetComponent<TextMeshProUGUI>().text = item.name;
         InvSlot slot = GetComponentInParent<InvSlot>();
         slot.Select();
         yield return new WaitForSeconds(1);
