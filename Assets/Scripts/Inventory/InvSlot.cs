@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class InvSlot : MonoBehaviour
+public class InvSlot : MonoBehaviour, IDropHandler
 {
     public Sprite selectedSprite;
     public Sprite deselectedSprite;
@@ -31,4 +31,9 @@ public class InvSlot : MonoBehaviour
         GetComponent<Image>().sprite = activeSprite;
     }
 
+    void IDropHandler.OnDrop(PointerEventData eventData) {
+        if (transform.childCount == 0) {
+            eventData.pointerDrag.GetComponent<InvItem>().parentAfterDrag = transform;
+        }
+    }
 }

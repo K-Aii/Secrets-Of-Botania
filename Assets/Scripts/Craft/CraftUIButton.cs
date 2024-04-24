@@ -13,9 +13,16 @@ public class CraftUIButton : MonoBehaviour, IPointerClickHandler
         isOn = !isOn;
 
         if (isOn)
+        {
             craft.alpha = 1;
+            craft.blocksRaycasts = true;
+        }
+
         else
+        {
             craft.alpha = 0;
+            craft.blocksRaycasts = false;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData) {

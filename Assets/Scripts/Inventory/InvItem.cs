@@ -6,10 +6,12 @@ using UnityEngine.EventSystems;
 using TMPro;
 
 
-public class InvItem : MonoBehaviour, IPointerClickHandler
+public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Item item;
     public AudioClip success;
+
+    public Transform parentAfterDrag;
 
 
     public void InitialiseItem(Item newitem)
@@ -20,7 +22,6 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
 
     IEnumerator Clicked()
     {
-        GameObject.Find("ItemName_text").GetComponent<TextMeshProUGUI>().text = item.name;
         InvSlot slot = GetComponentInParent<InvSlot>();
         slot.Select();
         yield return new WaitForSeconds(1);
@@ -31,11 +32,16 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject);
+        InventoryManager invManager = GameObject.Find("GameController").GetComponent<InventoryManager>();
+        InvItem itemInSlot = GetComponent<InvItem>();
+        PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
+        GameObject.Find("ItemName_text").GetComponent<TextMeshProUGUI>().text = item.name;
+        if (invManager.CheckInMain(itemInSlot.item))
+            return;
         GetComponentInParent<InvSlot>().StartCoroutine(Clicked());
 
         //Skill --> Cut
-        InvItem itemInSlot = GetComponent<InvItem>();
-        PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         if (itemInSlot != null && itemInSlot.item.name == "Cut")
             pc.Cut();
 
@@ -48,7 +54,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
         GameObject clickedItem = eventData.pointerCurrentRaycast.gameObject;
         if (clickedItem.transform.parent.tag == "graySlot")
         {
-            GameObject.Find("GameController").GetComponent<InventoryManager>().AddItem(clickedItem.GetComponent<InvItem>().item);   //obtain new skill (add into inv)
+            invManager.AddItem(clickedItem.GetComponent<InvItem>().item);   //obtain new skill (add into inv)
             GameObject.Find("Inventory").GetComponent<AudioSource>().PlayOneShot(success);
             GameObject.Find("new Slot_BG").GetComponent<CanvasGroup>().alpha = 0;   //unshow new skill notify slot
             GameObject.Find("swimSkill").GetComponent<SpriteRenderer>().enabled = false;    //unshow skill obtaining obj
@@ -59,5 +65,19 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData) {
+        GetComponent<Image>().raycastTarget = false;
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+    }
+
+    void IDragHandler.OnDrag(PointerEventData eventData) {
+        transform.position = Input.mousePosition;
+    }
+
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData) {
+        GetComponent<Image>().raycastTarget = true;
+        transform.SetParent(parentAfterDrag);
+    }
 
 }

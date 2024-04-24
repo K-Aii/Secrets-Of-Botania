@@ -25,6 +25,8 @@ public class InventoryManager : MonoBehaviour
             Debug.Log(SearchItem(test));
             
         }
+        if (Input.GetKeyDown(KeyCode.RightShift))
+            Debug.Log(CheckInMain(test));
 
 
     }
@@ -58,6 +60,18 @@ public class InventoryManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public bool CheckInMain(Item item) {
+        for (int i = 5; i < invSlots.Length; i++)
+        {
+            InvItem itemInSlot = invSlots[i].GetComponentInChildren<InvItem>();
+            if (itemInSlot != null && itemInSlot.item == item)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ShowObtainableSkill(Item item) {
