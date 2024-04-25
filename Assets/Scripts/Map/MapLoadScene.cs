@@ -10,11 +10,11 @@ public class MapLoadScene : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (this.gameObject.name == "Home_btn")
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         
 
         if (this.gameObject.name == "Forest_btn")
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
 
         FindObjectOfType<MapUIButton>().Toggle();
     }

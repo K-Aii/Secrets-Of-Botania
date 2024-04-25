@@ -23,8 +23,15 @@ public class JumpNotify : MonoBehaviour
             if (inv.SearchItem(jump) != null)
             {
                 inv.SearchItem(jump).Activate();
+                Debug.Log(inv.SearchItem(jump));
                 audioSourcce.PlayOneShot(noti);
             }
+            
+            if(transform.childCount != 0)
+                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+
+            
+
         }
     }
 
@@ -33,10 +40,14 @@ public class JumpNotify : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+
             if (inv.SearchItem(jump) != null)
             {
                 inv.SearchItem(jump).Deselect();
             }
+            
+            if (transform.childCount != 0)
+                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }

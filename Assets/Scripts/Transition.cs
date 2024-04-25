@@ -11,19 +11,20 @@ public class Transition : MonoBehaviour
     bool stay;
 
 
-    public static Transition instance;
+    //public static Transition instance;
 
     public void Awake()
     {
         fade = FindObjectOfType<BlackFade>();
         stay = false;
 
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(GameObject.Find("Canvas"));
-        }
-        //else {
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(GameObject.Find("Canvas"));
+        //}
+        //else
+        //{
         //    Destroy(GameObject.Find("Canvas"));
         //}
 
