@@ -8,6 +8,7 @@ TagManager:
   - graySlot
   - Floor
   - Mobs
+  - Octopus
   layers:
   - Default
   - TransparentFX

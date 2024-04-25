@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cut : MonoBehaviour
 {
@@ -14,8 +15,11 @@ public class Cut : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
-        treeCollider = GameObject.FindWithTag("Interactable").GetComponent<BoxCollider2D>();
-        audioSource = GameObject.FindWithTag("Interactable").GetComponent<AudioSource>();
+        audioSource = GameObject.Find("Canvas").GetComponent<AudioSource>();
+        
+        if (SceneManager.GetActiveScene().name == "002_Forest") {
+            treeCollider = GameObject.FindWithTag("Interactable").GetComponent<BoxCollider2D>();
+        }
     }
 
     public void Launch(Vector2 direction, float force)
@@ -24,12 +28,6 @@ public class Cut : MonoBehaviour
         rb.AddForce(direction * force);
         StartCoroutine(Decline());
     }
-
-    void Update()
-    {
-
-    }
-
 
     IEnumerator Decline()
     {
@@ -67,20 +65,27 @@ public class Cut : MonoBehaviour
             Destroy(other.collider.gameObject);
         }
 
+        if (other.collider.tag == "Octopus")
+        {
+            GameObject.Find("ink").GetComponent<SpriteRenderer>().enabled = true;
+            //Destroy(other.collider.gameObject);
+        }
+
         Destroy(gameObject);
     }
 
-    IEnumerator TreeFall(GameObject tree)
-    {
-        //Debug.Log(tree.transform.rotation * Quaternion.Euler(0, 0, -90));
-        float currentTime = 0;
-        while (currentTime < 1f)
-        {
-            currentTime += Time.deltaTime;
-            //float newS = Mathf.Lerp(1, 0, currentTime / 1f);
-            tree.transform.rotation = Quaternion.Slerp(tree.transform.rotation, Quaternion.Euler(tree.transform.rotation.x, tree.transform.rotation.y, 90f), currentTime / 1f);
-            yield return null;
-        }
-        yield break;
-    }
+
+    //IEnumerator TreeFall(GameObject tree) <---- gameObject Cutskill destroyed, cannot loop
+    //{
+    //    //Debug.Log(tree.transform.rotation * Quaternion.Euler(0, 0, -90));
+    //    float currentTime = 0;
+    //    while (currentTime < 1f)
+    //    {
+    //        currentTime += Time.deltaTime;
+    //        //float newS = Mathf.Lerp(1, 0, currentTime / 1f);
+    //        tree.transform.rotation = Quaternion.Slerp(tree.transform.rotation, Quaternion.Euler(tree.transform.rotation.x, tree.transform.rotation.y, 90f), currentTime / 1f);
+    //        yield return null;
+    //    }
+    //    yield break;
+    //}
 }

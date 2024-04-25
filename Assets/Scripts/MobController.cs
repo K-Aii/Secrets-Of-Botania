@@ -49,8 +49,13 @@ public class MobController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player") {
-            PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-            player.Die();
+            if (this.tag == "NoDamage")
+                return;
+            else { 
+                PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+                player.Die();
+            }
+            
         }
     }
 }
