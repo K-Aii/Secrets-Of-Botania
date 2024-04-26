@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
+
     }
 
     private void FixedUpdate()

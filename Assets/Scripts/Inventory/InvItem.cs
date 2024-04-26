@@ -31,7 +31,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
     }
 
     IEnumerator Consume() {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.2f);
         Destroy(this.gameObject);
     }
 

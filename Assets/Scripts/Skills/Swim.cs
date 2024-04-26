@@ -19,7 +19,7 @@ public class Swim : MonoBehaviour
     }
 
     IEnumerator Decline() {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
         Destroy(this.gameObject);
     }
 }
