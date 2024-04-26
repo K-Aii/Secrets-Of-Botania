@@ -3595,7 +3595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8904457, y: 0.07152915, z: -10}
+  m_LocalPosition: {x: 12.31, y: 0.07152915, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 904098406}
@@ -18463,7 +18463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118411752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: -2.24, z: -10}
+  m_LocalPosition: {x: 12.31, y: -2.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1069138939}
@@ -18499,9 +18499,10 @@ GameObject:
   - component: {fileID: 2123226546}
   - component: {fileID: 2123226549}
   - component: {fileID: 2123226548}
+  - component: {fileID: 2123226550}
   m_Layer: 0
   m_Name: Siren
-  m_TagString: Mobs
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18604,6 +18605,32 @@ MonoBehaviour:
   potion: {fileID: 11400000, guid: 53194d6dc818bab4da996ebb0b86f201, type: 2}
   noti: {fileID: 8300000, guid: 1f3f7b8c206776749b280d3d2dd3bfcb, type: 3}
   rock: {fileID: 632028805}
+--- !u!61 &2123226550
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123226545}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.050290108, y: -0.018287241}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7846154, y: 1.8153846}
+    newSize: {x: 1.5466666, y: 1.5733334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5194492, y: 1.7788101}
+  m_EdgeRadius: 0
 --- !u!1 &2125773311
 GameObject:
   m_ObjectHideFlags: 0
@@ -18996,7 +19023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1012948196143927456, guid: e5f4833a994dfe04b8ff20bf7b75ba18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.95
+      value: 12.31
       objectReference: {fileID: 0}
     - target: {fileID: 1012948196143927456, guid: e5f4833a994dfe04b8ff20bf7b75ba18, type: 3}
       propertyPath: m_LocalPosition.y

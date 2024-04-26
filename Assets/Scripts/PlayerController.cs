@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y < -10 && !isFalling)                      //drop damage
         {    
             isFalling = true;
+            print("Die: DropDamage");
             Die();
         }
 
@@ -159,9 +160,15 @@ public class PlayerController : MonoBehaviour
     // WaterJet collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Octopus" ) {
+        if (collision.GetType() == typeof(CapsuleCollider2D)) {
+            return;
+        }
+        
+        if (collision.tag == "Octopus" || collision.tag == "Mobs") {
             collision.enabled = false;
             Destroy(collision.gameObject);
-        } 
+        }
+
+        
     }
 }

@@ -51,6 +51,7 @@ public class Drown : MonoBehaviour
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, newA);
             yield return null;
         }
+        print("Die: Drown");
         player.Die();
         yield return new WaitForSeconds(1);
         started = false;

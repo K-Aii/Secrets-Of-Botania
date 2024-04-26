@@ -52,6 +52,7 @@ public class MobController : MonoBehaviour
             if (this.tag == "NoDamage")
                 return;
 
+            print("Die: MobController");
             collision.collider.GetComponent<PlayerController>().Die();
             
             

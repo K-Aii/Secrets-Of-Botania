@@ -34,7 +34,7 @@ public class SirenSing : MonoBehaviour
     IEnumerator Timer() {
         isCounting = true;
         yield return new WaitForSeconds(5);
-        print("time's up");
+        print("Die: SirenSing");
         player.GetComponent<PlayerController>().Die();
         yield return new WaitForSeconds(1f);
         isPulling = false;
@@ -51,6 +51,7 @@ public class SirenSing : MonoBehaviour
             audioSource.PlayOneShot(noti);
         }
 
+        GetComponent<BoxCollider2D>().enabled = true;
         transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(FadeIn());
     }
@@ -94,7 +95,18 @@ public class SirenSing : MonoBehaviour
         isPulling = false;
         isCounting = false;
         rock.GetComponent<PolygonCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(FadeOut());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        rock.GetComponent<PolygonCollider2D>().enabled = false;
     }
 }
