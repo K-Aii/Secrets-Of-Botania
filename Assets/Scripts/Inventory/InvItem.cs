@@ -30,6 +30,11 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
 
     }
 
+    IEnumerator Consume() {
+        yield return new WaitForSeconds(2.5f);
+        Destroy(this.gameObject);
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject);
@@ -57,12 +62,22 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
                 pc.Swim();
             else
                 print("Not in water");
-        }
-            
+        }   
 
         //Skill --> Waterjet
         if (itemInSlot != null && itemInSlot.item.name == "WaterJet")
             StartCoroutine(pc.Jet());
+
+        //Potion --> Pacify
+        if (itemInSlot != null && itemInSlot.item.name == "Pacify") {
+            if (GameObject.Find("notes") != null)
+            {
+                FindObjectOfType<SirenSing>().Pacify();
+                StartCoroutine(Consume());
+            }
+            else
+                print("Not used");
+        }
 
         //if parent is graySlot --> add new skill
         GameObject clickedItem = eventData.pointerCurrentRaycast.gameObject;

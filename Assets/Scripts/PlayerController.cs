@@ -77,14 +77,6 @@ public class PlayerController : MonoBehaviour
          rb.velocity = new Vector3(xInput * speed, rb.velocity.y, 0);   //horizontal movement
     }
 
-    public void Jump() {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Floor"));     //ground check
-        if (hit.collider != null)
-        {
-            rb.AddForce(Vector2.up * jumpforce);
-        }
-    }
-
     void FlipSprite()
     {
         if (isFacingR && xInput < 0 || !isFacingR && xInput > 0)
@@ -111,6 +103,16 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(fade.FadeIn(1f));
         rb.simulated = true;
         isFalling = false;
+    }
+
+    // ================= SKILLS =================
+
+    public void Jump() {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Floor"));     //ground check
+        if (hit.collider != null)
+        {
+            rb.AddForce(Vector2.up * jumpforce);
+        }
     }
 
     public void Cut() {
@@ -156,7 +158,7 @@ public class PlayerController : MonoBehaviour
     // WaterJet collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Octopus") {
+        if (collision.tag == "Octopus" ) {
             collision.enabled = false;
             Destroy(collision.gameObject);
         } 
