@@ -1,0 +1,1614 @@
+fileFormatVersion: 2
+guid: 16643268795f5954985bdeceefa62aa7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2296490787976912757
+    second: sprial_0
+  - first:
+      213: -8884409581833480950
+    second: sprial_1
+  - first:
+      213: -5312996775391742680
+    second: sprial_2
+  - first:
+      213: 9181659419627318290
+    second: sprial_3
+  - first:
+      213: -748673976464440259
+    second: sprial_4
+  - first:
+      213: 6727562001750906482
+    second: sprial_5
+  - first:
+      213: -662124905327479426
+    second: sprial_6
+  - first:
+      213: -703433868117168539
+    second: sprial_7
+  - first:
+      213: 76441224715361459
+    second: sprial_8
+  - first:
+      213: -8397188435350461634
+    second: sprial_9
+  - first:
+      213: -5472395652040323286
+    second: sprial_10
+  - first:
+      213: 4086765685389491394
+    second: sprial_11
+  - first:
+      213: -197672120189571869
+    second: sprial_12
+  - first:
+      213: 2347746231442867149
+    second: sprial_13
+  - first:
+      213: -6088356278251975584
+    second: sprial_14
+  - first:
+      213: 5446254225760732807
+    second: sprial_15
+  - first:
+      213: 6477014364810585732
+    second: sprial_16
+  - first:
+      213: -6302143513561198519
+    second: sprial_17
+  - first:
+      213: 3197751331058926739
+    second: sprial_18
+  - first:
+      213: -5127271021830406348
+    second: sprial_19
+  - first:
+      213: 1903542791188250195
+    second: sprial_20
+  - first:
+      213: -633822823992571049
+    second: sprial_21
+  - first:
+      213: 5419494313636716699
+    second: sprial_22
+  - first:
+      213: 5921704064685500096
+    second: sprial_23
+  - first:
+      213: -2840158617647551486
+    second: sprial_24
+  - first:
+      213: 3167867027086175007
+    second: sprial_25
+  - first:
+      213: -487722421009331870
+    second: sprial_26
+  - first:
+      213: 8065797630723642847
+    second: sprial_27
+  - first:
+      213: 6571410657828718359
+    second: sprial_28
+  - first:
+      213: -5206303209346700224
+    second: sprial_29
+  - first:
+      213: 3390631613714748803
+    second: sprial_30
+  - first:
+      213: 8816399823288694809
+    second: sprial_31
+  - first:
+      213: 5486231385148601404
+    second: sprial_32
+  - first:
+      213: -9059442201053560990
+    second: sprial_33
+  - first:
+      213: 5762248928580834990
+    second: sprial_34
+  - first:
+      213: 8067601753163052344
+    second: sprial_35
+  - first:
+      213: 3293546105880404268
+    second: sprial_36
+  - first:
+      213: -1262031792835220701
+    second: sprial_37
+  - first:
+      213: -6514305290494872575
+    second: sprial_38
+  - first:
+      213: -4278212255305325794
+    second: sprial_39
+  - first:
+      213: -2319289463551369777
+    second: sprial_40
+  - first:
+      213: -1713100798115667761
+    second: sprial_41
+  - first:
+      213: 4156209653455960435
+    second: sprial_42
+  - first:
+      213: 6352050732271007185
+    second: sprial_43
+  - first:
+      213: -5018379424743218234
+    second: sprial_44
+  - first:
+      213: 7970106303533234589
+    second: sprial_45
+  - first:
+      213: 3990351102441520715
+    second: sprial_46
+  - first:
+      213: 8898827393826301909
+    second: sprial_47
+  - first:
+      213: -623920084378972091
+    second: sprial_48
+  - first:
+      213: 2107460258136181856
+    second: sprial_49
+  - first:
+      213: -4463641073549623798
+    second: sprial_50
+  - first:
+      213: -4483913558561800533
+    second: sprial_51
+  - first:
+      213: -1061641240239847513
+    second: sprial_52
+  - first:
+      213: -3792961266579797314
+    second: sprial_53
+  - first:
+      213: 4937649497655772282
+    second: sprial_54
+  - first:
+      213: 1879782522641011823
+    second: sprial_55
+  - first:
+      213: 3606914149701826955
+    second: sprial_56
+  - first:
+      213: -4958977573393235461
+    second: sprial_57
+  - first:
+      213: -7478776871310386342
+    second: sprial_58
+  - first:
+      213: -4836532127170310372
+    second: sprial_59
+  - first:
+      213: -8058783231587543133
+    second: sprial_60
+  - first:
+      213: -3050963795307189497
+    second: sprial_61
+  - first:
+      213: -7324425082362267210
+    second: sprial_62
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80eda0bbc93120e0800000000000000
+      internalID: -2296490787976912757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_1
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a051db39e8c34b480800000000000000
+      internalID: -8884409581833480950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_2
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825bafd05917446b0800000000000000
+      internalID: -5312996775391742680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_3
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c618b789ecb6f70800000000000000
+      internalID: 9181659419627318290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_4
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34024c2cfc2c95f0800000000000000
+      internalID: -748673976464440259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_5
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27657c61ff91d5d50800000000000000
+      internalID: 6727562001750906482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_6
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3992
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75340d18e8afc6f0800000000000000
+      internalID: -662124905327479426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ea5e7bf96ec36f0800000000000000
+      internalID: -703433868117168539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_8
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcda5d83e29f0100800000000000000
+      internalID: 76441224715361459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_9
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33eae6bb91377b80800000000000000
+      internalID: -8397188435350461634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_10
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f8eb106252e04b0800000000000000
+      internalID: -5472395652040323286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_11
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc75edfcbb17b830800000000000000
+      internalID: 4086765685389491394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_12
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec2a16014ab14df0800000000000000
+      internalID: -197672120189571869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_13
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3493
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc30ae332ced49020800000000000000
+      internalID: 2347746231442867149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c85c0f830d18ba0800000000000000
+      internalID: -6088356278251975584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_15
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78640f2ec5bf49b40800000000000000
+      internalID: 5446254225760732807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_16
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48623a38f3af2e950800000000000000
+      internalID: 6477014364810585732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_17
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94017a65dd94a88a0800000000000000
+      internalID: -6302143513561198519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_18
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394ccc7a4e1b06c20800000000000000
+      internalID: 3197751331058926739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_19
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ff4accb2648d8b0800000000000000
+      internalID: -5127271021830406348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_20
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 2994
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ef78b451eba6a10800000000000000
+      internalID: 1903542791188250195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b436def753437f0800000000000000
+      internalID: -633822823992571049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_22
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90e0925d59e53b40800000000000000
+      internalID: 5419494313636716699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_23
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6e098e87e1e2250800000000000000
+      internalID: 5921704064685500096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_24
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c6a59f8cab598d0800000000000000
+      internalID: -2840158617647551486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_25
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1be42de64686fb20800000000000000
+      internalID: 3167867027086175007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_26
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269cebaca034b39f0800000000000000
+      internalID: -487722421009331870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_27
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 2495
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd55871f5387fef60800000000000000
+      internalID: 8065797630723642847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717c81d2d27523b50800000000000000
+      internalID: 6571410657828718359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ce9e5b0de7fb7b0800000000000000
+      internalID: -5206303209346700224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_30
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3855da30d71fd0f20800000000000000
+      internalID: 3390631613714748803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_31
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91870f09de42a5a70800000000000000
+      internalID: 8816399823288694809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_32
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34b163a062032c40800000000000000
+      internalID: 5486231385148601404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_33
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ff40f2155664280800000000000000
+      internalID: -9059442201053560990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_34
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1996
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea69f6feede97ff40800000000000000
+      internalID: 5762248928580834990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8353a9eec01e5ff60800000000000000
+      internalID: 8067601753163052344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_36
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c216f5cbbb605bd20800000000000000
+      internalID: 3293546105880404268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_37
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32baecc55cc5c7ee0800000000000000
+      internalID: -1262031792835220701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_38
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104fa914ad98895a0800000000000000
+      internalID: -6514305290494872575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_39
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13adc8ee9cb0a4c0800000000000000
+      internalID: -4278212255305325794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_40
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdd6b1658a30dfd0800000000000000
+      internalID: -2319289463551369777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_41
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1497
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0a0e786e7d938e0800000000000000
+      internalID: -1713100798115667761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379ba46c8a2dda930800000000000000
+      internalID: 4156209653455960435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_43
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5f5448c74072850800000000000000
+      internalID: 6352050732271007185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_44
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c32d0070822b5ab0800000000000000
+      internalID: -5018379424743218234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_45
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d993334a4718b9e60800000000000000
+      internalID: 7970106303533234589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_46
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e7d169f23906730800000000000000
+      internalID: 3990351102441520715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_47
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7288edd5cfe7b70800000000000000
+      internalID: 8898827393826301909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_48
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 998
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5401c5a2df36757f0800000000000000
+      internalID: -623920084378972091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 499
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cc57060f33f3d10800000000000000
+      internalID: 2107460258136181856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_50
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 499
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e3b3ec716fd02c0800000000000000
+      internalID: -4463641073549623798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_51
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 499
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baebd521060f5c1c0800000000000000
+      internalID: -4483913558561800533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_52
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 499
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a74994baea4441f0800000000000000
+      internalID: -1061641240239847513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_53
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 499
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba02b2f2d1bc5bc0800000000000000
+      internalID: -3792961266579797314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_54
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 502
+        width: 660
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74882dae0e068440800000000000000
+      internalID: 4937649497655772282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_55
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 502
+        width: 660
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64510dae34561a10800000000000000
+      internalID: 1879782522641011823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89be441f455e0230800000000000000
+      internalID: 3606914149701826955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_57
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf184c8bb2c2e2bb0800000000000000
+      internalID: -4958977573393235461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_58
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b132f4f0c063890800000000000000
+      internalID: -7478776871310386342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_59
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 660
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fcf37c7af21ecb0800000000000000
+      internalID: -4836532127170310372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprial_60
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 657
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7995f1953792090800000000000000
+      internalID: -8058783231587543133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -49,6 +50,19 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
         //Skill --> Jump
         if (itemInSlot != null && itemInSlot.item.name == "Jump")
             pc.Jump();
+
+        //Skill --> Swim
+        if (itemInSlot != null && itemInSlot.item.name == "Swim") {
+            if (SceneManager.GetActiveScene().name == "003_Lake")
+                pc.Swim();
+            else
+                print("Not in water");
+        }
+            
+
+        //Skill --> Waterjet
+        if (itemInSlot != null && itemInSlot.item.name == "WaterJet")
+            StartCoroutine(pc.Jet());
 
         //if parent is graySlot --> add new skill
         GameObject clickedItem = eventData.pointerCurrentRaycast.gameObject;

@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/002_Forest.unity
     guid: e8187b15ea228e84d9d1a1d76eae4c42
   - enabled: 1
-    path: Assets/Scenes/003_Underwater.unity
+    path: Assets/Scenes/003_Lake.unity
     guid: 686885f7c59238f4599d3f885a81dac9
   m_configObjects: {}

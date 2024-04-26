@@ -4278,6 +4278,7 @@ GameObject:
   - component: {fileID: 620890058}
   - component: {fileID: 620890061}
   - component: {fileID: 620890060}
+  - component: {fileID: 620890059}
   m_Layer: 5
   m_Name: Lake_btn
   m_TagString: Untagged
@@ -4304,6 +4305,18 @@ RectTransform:
   m_AnchoredPosition: {x: 266, y: 76}
   m_SizeDelta: {x: 343.33334, y: 96.333336}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &620890059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620890057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fbe8413464ed74e9af0d0036f52039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &620890060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4317,7 +4330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

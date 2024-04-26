@@ -16,6 +16,9 @@ public class MapLoadScene : MonoBehaviour, IPointerClickHandler
         if (this.gameObject.name == "Forest_btn")
             SceneManager.LoadScene(2);
 
+        if (this.gameObject.name == "Lake_btn")
+            SceneManager.LoadScene(3);
+
         FindObjectOfType<MapUIButton>().Toggle();
     }
 }

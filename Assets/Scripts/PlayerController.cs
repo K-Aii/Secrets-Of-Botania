@@ -13,12 +13,12 @@ public class PlayerController : MonoBehaviour
     Animator anim;
 
     AudioSource audioSource;
-    public AudioClip damaged;
+    public AudioClip damaged, water;
     public bool isFalling = false;
     BlackFade fade;
 
     public bool isFacingR = true;
-    public GameObject cutPrefab;//, bear, respawn1, respawn2;
+    public GameObject cutPrefab, jetPrefab, swimPrefab;//, bear, respawn1, respawn2;
 
     void Start()
     {
@@ -120,5 +120,45 @@ public class PlayerController : MonoBehaviour
 
         Vector2 lookDirection = isFacingR ? new Vector2(1,0) : new Vector2(-1,0);
         cutEffect.GetComponent<Cut>().Launch(lookDirection, 300);
+    }
+
+    public void Swim() {
+        GameObject swimEffect = Instantiate(swimPrefab, rb.position + Vector2.left * 1.1f, Quaternion.identity);
+    }
+
+    public IEnumerator Jet() {
+        rb.AddForce(Vector2.up * 100);
+        rb.gravityScale = 1;
+        transform.rotation = Quaternion.Euler(isFacingR ? new Vector3(0, 0, -90) : new Vector3(0, 0, 90));
+        GetComponent<CapsuleCollider2D>().enabled = true;
+
+        GameObject jetEffect = Instantiate(jetPrefab, rb.position, Quaternion.identity);
+        audioSource.PlayOneShot(water);
+        
+        float currentTime = 0;
+        while (currentTime < 0.3f)
+        {
+            currentTime += Time.deltaTime;
+            if(isFacingR)
+                transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3(0.3f, 0, 0), currentTime/0.3f);
+            else
+                transform.position = Vector3.Lerp(transform.position, transform.position - new Vector3(0.3f, 0, 0), currentTime / 0.3f);
+            yield return null;
+        }
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        rb.gravityScale = 2;
+        Destroy(jetEffect);
+        
+    }
+
+    // WaterJet collision
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Octopus") {
+            collision.enabled = false;
+            Destroy(collision.gameObject);
+        } 
     }
 }

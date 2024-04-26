@@ -51,10 +51,9 @@ public class MobController : MonoBehaviour
         if (collision.collider.tag == "Player") {
             if (this.tag == "NoDamage")
                 return;
-            else { 
-                PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-                player.Die();
-            }
+
+            collision.collider.GetComponent<PlayerController>().Die();
+            
             
         }
     }

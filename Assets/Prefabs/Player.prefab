@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1012948196143927463}
   - component: {fileID: 1012948196143927461}
   - component: {fileID: 314010966037990088}
+  - component: {fileID: 4003407497869617637}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -121,9 +122,12 @@ MonoBehaviour:
   speed: 4
   jumpforce: 500
   damaged: {fileID: 8300000, guid: 6e0bdf523caf58144a2241c21e0d4561, type: 3}
+  water: {fileID: 8300000, guid: 4e2249586d3c2c4439ab0907f91316b7, type: 3}
   isFalling: 0
   isFacingR: 1
   cutPrefab: {fileID: 3699978904021770571, guid: ca71b11eac5f04543b9120b31eaa188e, type: 3}
+  jetPrefab: {fileID: 4334322345586800427, guid: e0881646459bfe44abb8baedc19716a4, type: 3}
+  swimPrefab: {fileID: 7642008404986020851, guid: ef7ddcea5ce4beb40bcae928a3b2b767, type: 3}
 --- !u!50 &1012948196143927463
 Rigidbody2D:
   serializedVersion: 4
@@ -267,3 +271,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &4003407497869617637
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012948196143927459}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.048147786, y: 0.65450543}
+  m_Size: {x: 1.1953785, y: 0.42201024}
+  m_Direction: 1
