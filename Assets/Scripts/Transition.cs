@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Transition : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Transition : MonoBehaviour
     BlackFade fade;
     bool stay;
 
+    public Item flower;
+    Canvas playerDialogue;
 
     //public static Transition instance;
 
@@ -27,6 +30,8 @@ public class Transition : MonoBehaviour
         //{
         //    Destroy(GameObject.Find("Canvas"));
         //}
+
+        playerDialogue = GameObject.Find("Dialogue").GetComponent<Canvas>();
 
         if (fade.GetComponent<Image>().color.a == 1)
             StartCoroutine(fade.FadeIn(1f));
@@ -55,7 +60,21 @@ public class Transition : MonoBehaviour
     {
         if (collision.tag == "Player") {
             stay = true;
-            StartCoroutine(fade.FadeOut(1f));
+
+            //check flower
+            if (FindObjectOfType<InventoryManager>().GetComponent<InventoryManager>().SearchItem(flower) != null)
+                StartCoroutine(fade.FadeOut(1f));
+            else {
+                playerDialogue.GetComponentInChildren<TextMeshProUGUI>().text = "I NEED THE FLOWER!";
+                playerDialogue.enabled = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (playerDialogue.enabled) {
+            playerDialogue.enabled = false;
         }
     }
 

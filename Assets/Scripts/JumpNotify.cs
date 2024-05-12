@@ -13,7 +13,7 @@ public class JumpNotify : MonoBehaviour
     void Start()
     {
         inv = GameObject.Find("GameController").GetComponent<InventoryManager>();
-        audioSourcce = GetComponent<AudioSource>();
+        audioSourcce = GameObject.Find("Canvas").GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

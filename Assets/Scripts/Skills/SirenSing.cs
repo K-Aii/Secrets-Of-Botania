@@ -9,7 +9,7 @@ public class SirenSing : MonoBehaviour
     InventoryManager inv;
     public Item potion;
     AudioSource audioSource;
-    public AudioClip noti, ding;
+    public AudioClip noti, ding, mermaid;
     public Transform rock;
     
     // Start is called before the first frame update
@@ -44,6 +44,7 @@ public class SirenSing : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isPulling = true;
+        audioSource.PlayOneShot(mermaid);
 
         if (inv.SearchItem(potion) != null)
         {
@@ -109,7 +110,6 @@ public class SirenSing : MonoBehaviour
     {
         GameObject.Find("sing").GetComponent<SpriteRenderer>().enabled = true;
         audioSource.PlayOneShot(ding);
-        if (rock.GetComponent<PolygonCollider2D>())
-            rock.GetComponent<PolygonCollider2D>().enabled = false;
+        rock.GetComponent<PolygonCollider2D>().enabled = false;
     }
 }

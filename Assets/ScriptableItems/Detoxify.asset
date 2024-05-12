@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e2d1630f71846143ab46fe6223c788c, type: 3}
-  m_Name: Sing
+  m_Name: Detoxify
   m_EditorClassIdentifier: 
-  type: 0
-  img: {fileID: 21300000, guid: 050c3f163409a314da72eeb4aa67162b, type: 3}
-  description: Singing voice of Siren
+  type: 1
+  img: {fileID: 21300000, guid: 8a3742007d3ed7c4d98e39e7dfcd80e3, type: 3}
+  description: '[ Consumable ]
+
+    Remove harmful substances'
