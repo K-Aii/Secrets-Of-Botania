@@ -67,6 +67,10 @@ public class SwimObtain : MonoBehaviour
             }
         }
 
+        if (inv.SearchItem(swimSkill) != null) {
+            show.enabled = false;    //unshow skill obtaining obj
+        }
+
     }
 
     IEnumerator Find() {

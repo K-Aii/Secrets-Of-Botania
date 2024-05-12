@@ -43,6 +43,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
         PlayerController pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
         GameObject.Find("ItemName_text").GetComponent<TextMeshProUGUI>().text = item.name;
+        GameObject.Find("ItemContent_text").GetComponent<TextMeshProUGUI>().text = item.description;
         if (invManager.CheckInMain(itemInSlot.item))
             return;
         GetComponentInParent<InvSlot>().StartCoroutine(Clicked());
@@ -86,7 +87,6 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
             invManager.AddItem(clickedItem.GetComponent<InvItem>().item);   //obtain new skill (add into inv)
             GameObject.Find("Inventory").GetComponent<AudioSource>().PlayOneShot(success);
             GameObject.Find("new Slot_BG").GetComponent<CanvasGroup>().alpha = 0;   //unshow new skill notify slot
-            GameObject.Find("swimSkill").GetComponent<SpriteRenderer>().enabled = false;    //unshow skill obtaining obj
 
             //check recipe --> show and alert if new
             CraftManager craftManager = GameObject.Find("GameController").GetComponent<CraftManager>();

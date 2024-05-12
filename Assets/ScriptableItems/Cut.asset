@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Cut
   m_EditorClassIdentifier: 
   type: 0
-  function: 0
   img: {fileID: 21300000, guid: 8a2bd16dcce15694092e7e5ad88d174c, type: 3}
+  description: 'Launch a magical cut blade
+
+    Cause damage to some monsters'

@@ -64,12 +64,15 @@ public class PlayerController : MonoBehaviour
         //    transform.position = new Vector3(-7f, -1.25f, 0);       //respawn if fallen out of map
         //}
 
-        if (rb.velocity.y < -10 && !isFalling)                      //drop damage
-        {    
-            isFalling = true;
-            print("Die: DropDamage");
-            Die();
-        }
+        if (SceneManager.GetActiveScene().name != "003_Lake")
+        {
+            if (rb.velocity.y < -10 && !isFalling)                      //drop damage
+            {
+                isFalling = true;
+                print("Die: DropDamage");
+                Die();
+            }
+        }  
 
 
     }

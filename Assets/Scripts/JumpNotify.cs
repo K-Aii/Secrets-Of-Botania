@@ -23,7 +23,6 @@ public class JumpNotify : MonoBehaviour
             if (inv.SearchItem(jump) != null)
             {
                 inv.SearchItem(jump).Activate();
-                Debug.Log(inv.SearchItem(jump));
                 audioSourcce.PlayOneShot(noti);
             }
             
