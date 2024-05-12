@@ -29,9 +29,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        //Debug.Log(rb.velocity.y);
-        
+    {        
         xInput = Input.GetAxis("Horizontal");
 
         FlipSprite();

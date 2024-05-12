@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   img: {fileID: 21300000, guid: 050c3f163409a314da72eeb4aa67162b, type: 3}
-  description: Singing voice of Siren
+  description: "Siren\u2019s celestial vocal"

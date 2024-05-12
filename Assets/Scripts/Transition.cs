@@ -13,6 +13,7 @@ public class Transition : MonoBehaviour
 
     public Item flower;
     Canvas playerDialogue;
+    public AudioClip denial;
 
     //public static Transition instance;
 
@@ -39,9 +40,10 @@ public class Transition : MonoBehaviour
 
     private void Update()
     {
-        if (fade.completed && stay)
+        if (fade.completed)
         {
-            SceneManager.LoadScene(nextLevel);
+            if(stay)
+                SceneManager.LoadScene(nextLevel);
         }
     }
 
@@ -65,6 +67,9 @@ public class Transition : MonoBehaviour
             if (FindObjectOfType<InventoryManager>().GetComponent<InventoryManager>().SearchItem(flower) != null)
                 StartCoroutine(fade.FadeOut(1f));
             else {
+                print("No flower");
+                GameObject.Find("Canvas").GetComponent<AudioSource>().PlayOneShot(denial);
+                playerDialogue = GameObject.Find("Dialogue").GetComponent<Canvas>();
                 playerDialogue.GetComponentInChildren<TextMeshProUGUI>().text = "I NEED THE FLOWER!";
                 playerDialogue.enabled = true;
             }

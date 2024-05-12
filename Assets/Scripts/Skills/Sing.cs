@@ -40,18 +40,12 @@ public class Sing : MonoBehaviour
         switch (dialogueIndex)
         {
             case 1:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "I LOVE\nYOUR SONG!";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "For you, my dear!";
                 break;
             case 2:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "BRING THIS WITH YOU";
-                break;
-            case 3:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "AS A GIFT FOR YOUR SONG.";
-                break;
-            case 4:
                 NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "GOOD LUCK!";
                 break;
-            case 5:
+            case 3:
                 NPCdialogue.enabled = false;
                 if (inv.SearchItem(potion) == null)
                 {

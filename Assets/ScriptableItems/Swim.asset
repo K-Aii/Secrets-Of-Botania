@@ -16,4 +16,4 @@ MonoBehaviour:
   img: {fileID: 21300000, guid: e335abb6676b5f1458dd1002f43ea0b2, type: 3}
   description: '[ Active for 5 sec. ]
 
-    Allow breathing underwater'
+    Breathe underwater'

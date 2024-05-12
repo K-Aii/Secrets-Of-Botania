@@ -33,17 +33,26 @@ public class NPCTrigger : MonoBehaviour
         switch (dialogueIndex)
         {
             case 2:
-                playerDialogue.GetComponent<Dialogue>().left = false;
-                playerDialogue.GetComponent<Canvas>().enabled = true;
-                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "I AM HEADING TO THE WEST.";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Where are\nyou off to?";
                 break;
             case 3:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "THEN BRING THIS WITH YOU";
+                playerDialogue.GetComponent<Dialogue>().left = false;
+                playerDialogue.GetComponent<Canvas>().enabled = true;
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "I AM HEADING WEST!";
                 break;
             case 4:
-                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "THANK YOU!";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "That's brave of you!";
                 break;
             case 5:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Take this potion,";
+                break;
+            case 6:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "it will help you on your journey!";
+                break;
+            case 7:
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "THANK YOU!";
+                break;
+            case 8:
                 playerDialogue.GetComponent<Canvas>().enabled = false;
                 if (isOut)
                 {

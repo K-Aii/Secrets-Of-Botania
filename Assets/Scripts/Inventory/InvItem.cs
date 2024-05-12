@@ -62,19 +62,31 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
             pc.Jump();
 
         //Skill --> Swim
-        if (itemInSlot != null && itemInSlot.item.name == "Swim") {
+        if (transform.parent.tag != "graySlot")
+        {
+            if (itemInSlot != null && itemInSlot.item.name == "Swim")
+            {
+                if (SceneManager.GetActiveScene().name == "003_Lake")
+                    pc.Swim();
+                else
+                {
+                    print("Not in water");
+                    audioSource.PlayOneShot(denial);
+                }
+            }
+        }
+
+        //Skill --> Waterjet
+        if (itemInSlot != null && itemInSlot.item.name == "WaterJet")
+        {
             if (SceneManager.GetActiveScene().name == "003_Lake")
-                pc.Swim();
+                StartCoroutine(pc.Jet());
             else
             {
                 print("Not in water");
                 audioSource.PlayOneShot(denial);
             }
-        }   
-
-        //Skill --> Waterjet
-        if (itemInSlot != null && itemInSlot.item.name == "WaterJet")
-            StartCoroutine(pc.Jet());
+        }
 
         //Potion --> Pacify
         if (itemInSlot != null && itemInSlot.item.name == "Pacify") {
@@ -91,13 +103,17 @@ public class InvItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, I
         }
 
         //Skill --> Sing
-        if (itemInSlot != null && itemInSlot.item.name == "Sing") {
-            if (GameObject.Find("NPC_Siren") != null)
-                FindObjectOfType<Sing>().SingToNPC();
-            else
+        if (transform.parent.tag != "graySlot")
+        {
+            if (itemInSlot != null && itemInSlot.item.name == "Sing")
             {
-                print("Not used");
-                audioSource.PlayOneShot(denial);
+                if (GameObject.Find("NPC_Siren") != null)
+                    FindObjectOfType<Sing>().SingToNPC();
+                else
+                {
+                    print("Not used");
+                    audioSource.PlayOneShot(denial);
+                }
             }
         }
 

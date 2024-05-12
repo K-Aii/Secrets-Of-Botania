@@ -22,6 +22,7 @@ public class BeeDamage : MonoBehaviour
         {
             PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
             player.Die();
+            print("Die: Bee");
         }
     }
 }

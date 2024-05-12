@@ -39,35 +39,34 @@ public class SwimObtain : MonoBehaviour
             {
                 StartCoroutine(Find());
             }
-
-            if (show.enabled)
-            {
-                newSkill.alpha = 1;
-                //create new child if don hv
-                InvItem skillInSlot = inv.graySlot.GetComponentInChildren<InvItem>();
-                if (skillInSlot == null)
-                {
-                    //print("t");
-                    inv.ShowObtainableSkill(swimSkill);
-                }
-
-            }
-        }
-        else {
-            if (show.enabled)
-            {
-                newSkill.alpha = 0;
-                //destory child if have
-                InvItem skillInSlot = inv.graySlot.GetComponentInChildren<InvItem>();
-                if (skillInSlot != null)
-                {
-                    Destroy(skillInSlot.gameObject);
-                }
-
-            }
         }
 
-        if (inv.SearchItem(swimSkill) != null) {
+
+        if (show.enabled && stay)
+        {
+            newSkill.alpha = 1;
+            //create new child if don hv
+            InvItem skillInSlot = inv.graySlot.GetComponentInChildren<InvItem>();
+            if (skillInSlot == null)
+            {
+                inv.ShowObtainableSkill(swimSkill);
+            }
+
+        }
+        else if (!show.enabled || !stay)
+        {
+            newSkill.alpha = 0;
+            //destory child if have
+            InvItem skillInSlot = inv.graySlot.GetComponentInChildren<InvItem>();
+            if (skillInSlot != null)
+            {
+                Destroy(skillInSlot.gameObject);
+            }
+
+        }
+
+        if (inv.SearchItem(swimSkill) != null)
+        {
             show.enabled = false;    //unshow skill obtaining obj
         }
 

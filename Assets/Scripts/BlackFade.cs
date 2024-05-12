@@ -38,6 +38,8 @@ public class BlackFade : MonoBehaviour
             yield return null;
         }
         yield return completed = true;
+        yield return new WaitForSeconds(5);
+        completed = false;
     }
 
     public IEnumerator FadeOut(float fadeTime)  //trans to black
@@ -52,6 +54,8 @@ public class BlackFade : MonoBehaviour
             yield return null;
         }
         yield return completed = true;
+        yield return new WaitForSeconds(5);
+        completed = false;
     }
 
     public IEnumerator Fade()  //trans to black to trans

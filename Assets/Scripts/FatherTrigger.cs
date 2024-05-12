@@ -32,20 +32,45 @@ public class FatherTrigger : MonoBehaviour
         switch (dialogueIndex)
         {
             case 2:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "ARE YOU REALLY GOING?";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Are you sure about the adventure?";
                 break;
             case 3:
                 playerDialogue.GetComponent<Dialogue>().left = false;
                 playerDialogue.GetComponent<Canvas>().enabled = true;
-                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "ADVENTURE IS CALLING ME!";
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Absolutely!\nI am pumped!";
                 break;
             case 4:
-                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "THEN BRING THIS WITH YOU";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Take this with you,";
                 break;
             case 5:
-                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "THANK YOU!";
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "it¡¦ll be your ally!";
                 break;
             case 6:
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Wow! Thank you, Father!";
+                if (inv.SearchItem(cut) == null)
+                {
+                    inv.AddItem(cut);
+                }
+                break;
+            case 7:
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Father, is there anything you want?";
+                break;
+            case 8:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Hmmm¡K";
+                break;
+            case 9:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Just bring me a flower from each place.";
+                break;
+            case 10:
+                playerDialogue.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Sure! Goodbye, Father!";
+                break;
+            case 11:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Believe in yourself!";
+                break;
+            case 12:
+                NPCdialogue.GetComponentInChildren<TextMeshProUGUI>().text = "Enjoy the adventure!";
+                break;
+            case 13:
                 playerDialogue.GetComponent<Canvas>().enabled = false;
                 if (isOut)
                 {
@@ -53,11 +78,6 @@ public class FatherTrigger : MonoBehaviour
                     //GetComponent<AudioSource>().PlayOneShot(door);
                     //NPC.GetComponent<BoxCollider2D>().enabled = false;
                     isOut = false;
-                }
-
-                if (inv.SearchItem(cut) == null)
-                {
-                    inv.AddItem(cut);
                 }
                 break;
         }

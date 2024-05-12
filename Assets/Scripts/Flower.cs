@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Flower : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class Flower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        octopus = GameObject.Find("Octopus (2)").GetComponent<Transform>();
+        if(SceneManager.GetActiveScene().name == "003_Lake")
+            octopus = GameObject.Find("Octopus (2)").GetComponent<Transform>();
         inv = GameObject.Find("GameController").GetComponent<InventoryManager>();
     }
 
@@ -40,13 +42,19 @@ public class Flower : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
             stay = true;
+            if (transform.childCount != 0)
+                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-            stay = false;
+        stay = false;
+        if (transform.childCount != 0)
+            transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
     }
 
 
